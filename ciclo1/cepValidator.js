@@ -26,7 +26,7 @@ async function consultarCep(cep) {
         if (!response.ok) {
       throw new Error('Erro na rede');
         }
-        data = await response.json()
+        const data = await response.json()
         if(data.erro == true){
             return false
         }
